@@ -1,11 +1,31 @@
 .text-input{
-    border: 1px solid #cacccd;
-    height: 50px;
+    height: $xl-size;
+    width: 100%;
     font-size: $font-size-large;
     font-weight: 300;
-    padding: $s-size;
+    padding-left: $n-size;
+    background-color: $primary_transparent;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: $n-size;
+}
+.text-input:focus {
+    outline-width: 0;
 }
 
+.text-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.text-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+.text-input::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
 .select {
     @extend .text-input;
 
